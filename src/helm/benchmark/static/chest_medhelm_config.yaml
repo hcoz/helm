@@ -1,0 +1,33 @@
+name: my_test_suite
+description: Benchmarking multiple LLMs on chest medicine MCQs
+
+scenarios:
+  - name: chest_medicine
+    class: chest_medicine_scenario.ChestMedicineScenario
+    args:
+      yaml_path: src/helm/benchmark_suites/chest_medicine/test.yaml
+
+entries:
+  - description: "Run chest_medicine on openai/o3"
+    model: openai/o3
+    scenario: chest_medicine
+
+  - description: "Run chest_medicine on claude-sonnet-4"
+    model: anthropic/claude-sonnet-4
+    scenario: chest_medicine
+
+  - description: "Run chest_medicine on gemini-2.5-pro"
+    model: google/gemini-2.5-pro
+    scenario: chest_medicine
+
+  - description: "Run chest_medicine on llama-4-maverick"
+    model: meta-llama/llama-4-maverick
+    scenario: chest_medicine
+
+  - description: "Run chest_medicine on mistral-large"
+    model: mistralai/mistral-large
+    scenario: chest_medicine
+
+  - description: "Run chest_medicine on deepseek-v3"
+    model: deepseek-ai/deepseek-v3
+    scenario: chest_medicine
