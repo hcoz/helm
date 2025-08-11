@@ -10,7 +10,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 
 @run_spec_function("chest")
 def get_chest_run_spec() -> RunSpec:
-    scenario_spec = ScenarioSpec(class_name="helm.benchmark.scenarios.simple_scenarios.SimpleMCQAScenario")
+    scenario_spec = ScenarioSpec(class_name="helm.benchmark.scenarios.chest_scenario.ChestScenario")
     adapter_spec = get_multiple_choice_joint_adapter_spec(
         instructions="Answer the following questions with a single letter only.",
         input_noun="Question",
