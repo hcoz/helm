@@ -107,13 +107,32 @@ note={Featured Certification, Expert Certification}
 
 ## Chest commands
 
+create vitrual env with python 3.12
+
+```
+python3.12 -m venv venv
+```
+
+uninstall global crfm-helm if exists
+```
+pip uninstall crfm-helm
+```
+
+install packages
+```
+pip install --force-reinstall -e .
+```
+
 Change model as you want
 ```
 helm-run --run-entries chest:model=openai/gpt2 --suite chest --max-eval-instances 5
 ```
+output generated under `benchmark_output/` folder
+
 ```
 helm-summarize --suite chest
 ```
+
 ```
 helm-server --suite chest
 ```
