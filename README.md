@@ -103,3 +103,9 @@ url={https://openreview.net/forum?id=iO4LZibEqW},
 note={Featured Certification, Expert Certification}
 }
 ```
+
+
+## Chest commands
+```
+helm-run --run-entries chest:model=openai/gpt2 --suite chest --max-eval-instances 5
+```
