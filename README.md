@@ -106,6 +106,15 @@ note={Featured Certification, Expert Certification}
 
 
 ## Chest commands
+
+Change model as you want
 ```
 helm-run --run-entries chest:model=openai/gpt2 --suite chest --max-eval-instances 5
 ```
+```
+helm-summarize --suite chest
+```
+```
+helm-server --suite chest
+```
+Then go to http://localhost:8000/ in your browser.
